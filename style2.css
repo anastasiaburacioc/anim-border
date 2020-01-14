@@ -1,0 +1,60 @@
+body{
+    background-color: #333;
+}
+.box{
+    width: 300px;
+    height: 400px;
+    background-color: #444;
+    overflow: hidden;
+}
+.box div:nth-child(1){
+    height: 5px;
+    width: 300px;
+    background-color: green;
+    animation: anim-1 2s;
+}
+.box div:nth-child(2){
+    width: 5px;
+    height: 400px;
+    background-color: green;
+    transform: translateY(-400px) translateX(295px) ;
+    animation: anim-2 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+.box div:nth-child(3){
+    height: 5px;
+    width: 300px;
+    background-color: green;
+    transform: translateX(300px);
+    animation: anim-3 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+.box div:nth-child(4){
+    width: 5px;
+    height: 400px;
+    background-color: green;
+    transform: translateY(0px);
+    animation: anim-4 2s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes anim-1{
+    from{transform: translateX(-300px);   }
+    to{transform: translateX(0px);    }
+}
+@keyframes anim-2{
+    from{transform: translateY(-405px) translateX(295px);  }
+    to{transform: translateY(-5px) translateX(295px);  }
+}
+@keyframes anim-3{
+    from{transform: translateX(300px);}
+    to{transform: translateY(-10px); }
+}
+@keyframes anim-4{
+    from{transform: translateY(0px);}
+    to{transform: translateY(-410px);}
+}
+
